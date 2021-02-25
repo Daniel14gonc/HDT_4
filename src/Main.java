@@ -72,11 +72,7 @@ class Main {
                   if(!convertido.contains("Expresion Invalida")){
                     //Evaluacion de expresion
                     String res = calculadora.Calculo(convertido);
-                    if(res == null) {
-                        System.out.println("aaaa");
-                    }
-                    else
-                        System.out.println("Expresion invalida");
+                    System.out.println(res);
                   }
                   else
                     System.out.println("Expresion invalida");

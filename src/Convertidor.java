@@ -66,18 +66,15 @@ public class Convertidor{
           }
           stack.pop(); 
         }
-        else if(c == ' '){
-
-        }
-        else if(operadores.contains(Character.toString(c))) // Se encuentra un operador
-        { 
+        else if(operadores.contains(Character.toString(c)))  // Se encuentra un operador
+        {
           while (!stack.empty() && Prec(c) <= Prec(stack.peek())){ 
             result += stack.pop(); 
           } 
-          stack.push(c); 
+          stack.push(c);
         }
-        else if(c != ' '){
-          return "Expresion Invalida. Intente con otra por favor.";
+      else if(c != ' '){
+        return "Expresion Invalida. Intente con otra por favor.";
       }
     
     } 

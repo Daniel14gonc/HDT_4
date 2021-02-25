@@ -1,7 +1,6 @@
 /**
- * @author Daniel Gonzalez
- * Carné: 20293
- * Modificacion: 01/31/2021
+ * @author Daniel Gonzalez 20293, Manuel Archila 161250
+ * Modificacion: 02/24/2021
  * Clase: StackVector
  *
  * Descripcion:

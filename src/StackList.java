@@ -17,9 +17,16 @@ public class StackList<T> extends AbstractStack<T> {
   }
   
   public T peek(){
+    //Pre: Determinar si el stack esta vacio o no.
     //Post: Retornar el ultimo valor de la lista.
-    T last = lista.getLast();
-    return last;
+    if(empty()){
+      T last = lista.getLast();
+      return last;
+    }
+    else {
+      return null;
+    }
+
   }
 
   public void push(T num){
@@ -37,7 +44,7 @@ public class StackList<T> extends AbstractStack<T> {
   }
 
   public int size(){
-    //Post retornar el tamaño de la lista.
+    //Post: retornar el tamaño de la lista.
     int size = lista.size();
 
     return size;

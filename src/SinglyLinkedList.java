@@ -1,3 +1,12 @@
+/**@author Manuel Archila 161250, Daniel Gonzalez 20293
+ * Modificacion: 02/24/2021
+ * Clase: SinglyLinkedList
+ *
+ * Descripcion:
+ *  Clase que permite implementar los metodos de una lista necesarios para
+ *  un stack.
+ */
+
 public class SinglyLinkedList<E> extends AbstractList<E> {
 
   private Node<E> head;

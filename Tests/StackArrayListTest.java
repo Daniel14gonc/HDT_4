@@ -6,7 +6,7 @@ public class StackArrayListTest {
 
     @Test
     public void push() {
-        StackArrayList<String> stacki = new StackArrayList<>();
+        StackArrayList<String> stacki = new StackArrayList<String>();
         stacki.push("2");
         assertEquals("2", stacki.peek());
     }

@@ -12,5 +12,6 @@ public interface CalculadoraGeneral {
     /**Metodo que permite evaluar expresiones en postfix.*/
     public String Calculo(String expresion) throws Exception;
 
+    /**Metodo que permite modificar el stack que usa la calculadora.*/
     public void setStack(Stack<Integer> stack);
 }

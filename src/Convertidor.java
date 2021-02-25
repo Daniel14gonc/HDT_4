@@ -1,3 +1,13 @@
+/**
+ * @author Alejandro Archila 161250
+ * Modificacion: 02/24/2021
+ * Clase: Convertidor
+ *
+ * Descripcion:
+ *  Clase que permite convertir una expresion de infix a postfix.
+ */
+
+
 public class Convertidor{
   //Codigo obtenido en GeeksforGeeks
   //Extraido de: https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
@@ -24,7 +34,10 @@ public class Convertidor{
   } 
 
   static String infixToPostfix(String exp) 
-  { 
+  {
+    //Pre: Determinar si se ingreso un numero, un operador o un parentesis.
+    //Post: Devolver la expresion convertida a postfix.
+
     //Crea una nueva string con el postfix
     String result = new String(""); 
       

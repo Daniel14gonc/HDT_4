@@ -1,3 +1,13 @@
+/**
+ * @author Daniel Gonzalez 20293, Alejandro Archila 161250
+ * Modificacion: 02/21/2021
+ * Clase: StackFactory
+ *
+ * Descripcion:
+ *  Clase que permite usar una implementacion de stack indicada por el usuario.
+ */
+
+
 public class StackFactory<T> {
 
   private ListFactory<T> listFactory;
@@ -6,8 +16,10 @@ public class StackFactory<T> {
     listFactory = new ListFactory<T>();
   }
 
-  //Metodo que devuelve un stack dependiendo del tipo deseado.
+  /**Metodo que devuelve un stack dependiendo del tipo deseado.*/
   public Stack<T> getStack(int tipo){
+    //Pre: Decide que tipo de stack debe devoler.
+    //Post: Devuelve un stack basado en el tipo indicado por el usuario.
 
     switch(tipo){
       //StackArrayList

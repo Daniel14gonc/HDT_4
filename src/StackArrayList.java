@@ -1,3 +1,13 @@
+/**
+ * @author Alejandro Archila 161250
+ * Modificacion: 02/24/2021
+ * Clase: StackArrayList
+ *
+ * Descripcion:
+ *  Clase que permite implementar las acciones de un stack para el
+ *  almacenamiento y manejo de datos por medio de un arraylist.
+ */
+
 import java.util.ArrayList;
 public class StackArrayList<T> extends AbstractStack<T>{
 
@@ -15,6 +25,8 @@ public class StackArrayList<T> extends AbstractStack<T>{
 
   //Metodo que obtiene el elemento final, lo remueve del stack y lo devuelve.
   public T pop(){
+    //Pre: Determina si el stack esta vacio.
+    //Post: Devuelve y elimina el ultimo valor del stack o regresa null si esta vacio.
     if(!empty()){
       T last = stack.get(stack.size() - 1);
       stack.remove(last);
@@ -24,13 +36,10 @@ public class StackArrayList<T> extends AbstractStack<T>{
       return null;
 
   }
-  //Metodo que verifica si el stack vacio devolvinedo true si esta vacio y false si no esta vacio.
-  public boolean empty(){
-    boolean stat = stack.isEmpty();
-    return stat;
-  }
+
   //Metodo que devuelve la cantidad del elementos en el Stack
   public int size(){
+    //Post: retornar el tamaño de la lista.
     int size = stack.size();
     return size;
 
@@ -38,7 +47,9 @@ public class StackArrayList<T> extends AbstractStack<T>{
 
   //Metodo que muestra cual es el ultimo elemento en el Stack.
   public T peek(){
-    if(empty()){
+    //Pre: Determinar si el stack esta vacio o no.
+    //Post: Retornar el ultimo valor de la lista o null si esta vacio.
+    if(!empty()){
       T ojo = stack.get(size()-1);
       return ojo;
     }

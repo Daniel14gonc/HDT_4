@@ -2,6 +2,9 @@ public class Convertidor{
   //Codigo obtenido en GeeksforGeeks
   //Extraido de: https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
   //Metodo que indentifica que retorna para cada operador detectado
+
+  private static String operadores = "+-*/";
+
   static int Prec(char ch) 
   { 
     switch (ch) 
@@ -49,14 +52,20 @@ public class Convertidor{
             result += stack.pop();
           }
           stack.pop(); 
-        } 
-        else // Se encuentra un operador
+        }
+        else if(c == ' '){
+
+        }
+        else if(operadores.contains(Character.toString(c))) // Se encuentra un operador
         { 
           while (!stack.empty() && Prec(c) <= Prec(stack.peek())){ 
             result += stack.pop(); 
           } 
           stack.push(c); 
-        } 
+        }
+        else if(c != ' '){
+          return "Expresion Invalida. Intente con otra por favor.";
+      }
     
     } 
     

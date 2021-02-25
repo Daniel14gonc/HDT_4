@@ -15,9 +15,14 @@ public class StackArrayList<T> extends AbstractStack<T>{
 
   //Metodo que obtiene el elemento final, lo remueve del stack y lo devuelve.
   public T pop(){
-    T last = stack.get(stack.size() - 1);
-    stack.remove(last);
-    return last;
+    if(!empty()){
+      T last = stack.get(stack.size() - 1);
+      stack.remove(last);
+      return last;
+    }
+    else
+      return null;
+
   }
   //Metodo que verifica si el stack vacio devolvinedo true si esta vacio y false si no esta vacio.
   public boolean empty(){
@@ -33,7 +38,13 @@ public class StackArrayList<T> extends AbstractStack<T>{
 
   //Metodo que muestra cual es el ultimo elemento en el Stack.
   public T peek(){
-    T ojo = stack.get(size()-1);
-    return ojo;
+    if(empty()){
+      T ojo = stack.get(size()-1);
+      return ojo;
+    }
+    else {
+      return null;
+    }
+
   }
 }

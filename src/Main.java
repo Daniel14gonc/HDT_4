@@ -1,4 +1,3 @@
-
 /**@author Manuel Archila 161250, Daniel Gonzalez 20293
 * Modificacion: 02/21/2021
 * Clase: Main
@@ -23,14 +22,11 @@ class Main {
         Scanner entrada = new Scanner(new File("datos.txt"));
         while (entrada.hasNextLine()) {
             datos += entrada.nextLine();
-            System.out.println(datos);
         }
         entrada.close();
     } catch (Exception ex) {
         ex.printStackTrace();
     }
-    String expresion = Convertidor.infixToPostfix(datos);
-    System.out.println(expresion);
     while(!exit){
       try{
         //Se lee el tipo de stack que el usuario desea ingresar y se valida que el input sea correcto.
@@ -76,7 +72,11 @@ class Main {
                   if(!convertido.contains("Expresion Invalida")){
                     //Evaluacion de expresion
                     String res = calculadora.Calculo(convertido);
-                    System.out.println(res);
+                    if(res == null) {
+                        System.out.println("aaaa");
+                    }
+                    else
+                        System.out.println("Expresion invalida");
                   }
                   else
                     System.out.println("Expresion invalida");

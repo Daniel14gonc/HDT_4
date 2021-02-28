@@ -13,7 +13,7 @@ public class Calculadora implements CalculadoraGeneral{
     private Stack<Integer> stack;
     private String nums;
     private String ops;
-    private static boolean instance = false;
+    private static CalculadoraGeneral instance;
 
     private Calculadora(){
         //Post: Crear un vector que almacene los resultados de las operaciones. Crear strings
@@ -22,13 +22,12 @@ public class Calculadora implements CalculadoraGeneral{
         ops = "+-*/";
     }
 
-    public static CalculadoraGeneral getCalculadora(){
-      if(!instance){
-        instance = true;  
-        return new Calculadora();
+    public static CalculadoraGeneral singletonCalculadora(){
+      if(instance == null){
+        instance = new Calculadora();
+        return instance;
       }
-      else
-        return null;
+      return instance;
     }
 
     @Override

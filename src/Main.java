@@ -52,7 +52,7 @@ class Main {
     }
 
     Stack<Integer> stack = stackFactory.getStack(option); 
-    CalculadoraGeneral calculadora = Calculadora.getCalculadora();
+    CalculadoraGeneral calculadora = Calculadora.singletonCalculadora();
     calculadora.setStack(stack);
 
     if(calculadora == null)

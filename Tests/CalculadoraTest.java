@@ -7,7 +7,7 @@ public class CalculadoraTest {
     @Test
     public void calculo() {
         Stack<Integer> stack = new StackFactory<Integer>().getStack(4);
-        CalculadoraGeneral calculadora = Calculadora.getCalculadora();
+        CalculadoraGeneral calculadora = Calculadora.singletonCalculadora();
         calculadora.setStack(stack);
         String exp = "(1+2) * 3";
         String expresionEvaluar = Convertidor.infixToPostfix(exp);
